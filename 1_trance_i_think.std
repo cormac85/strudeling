@@ -9,14 +9,14 @@ $: note("e3 e4 g3 [c5 - c5 g4]")
 .scope()
 
 
-// $: stack(
-//   s("bd - bd - ").bank("RolandTR909").gain(0.4),
-//   s("hh(4, 4, 0)*2").gain(0.3).bank("RolandTR909").hpf(15000).crush(6).delay(0.33).pan(sine.slow(1)),
-//   s("- - [hh hh] [hh hh hh]").bank("RolandTR909").gain(0.3).lpf(1000).crush(6).phaser(5).distort(1).delay(0.06),
-// ).scope()
+$: stack(
+  s("bd - bd - ").bank("RolandTR909").gain(0.4),
+  s("hh(4, 4, 0)*2").gain(0.3).bank("RolandTR909").hpf(15000).crush(6).delay(0.33).pan(sine.slow(1)),
+  s("- - [hh hh] [hh hh hh]").bank("RolandTR909").gain(0.3).lpf(1000).crush(6).phaser(5).distort(1).delay(0.06),
+).scope()
 
-// const saw_drone = s().note("<c1 e1>")
-// $: stack(
-//   saw_drone.s("sawtooth").gain(1).lpf(400),
-//   saw_drone.s("sine").transpose(12).gain(1.5)
-// )
+const saw_drone = s().note("<c1 e1>")
+$: stack(
+  saw_drone.s("sawtooth").gain(1).lpf(400),
+  saw_drone.s("sine").transpose(12).gain(1.5)
+)
