@@ -1,0 +1,5 @@
+setCpm(120/4)
+
+// 1. Start the sine wave synth
+$: note("<g1 e1 d1 e1>").s("supersaw").add(sine.range(0, 4),slow()).room(2).gain(0.05).delay(0.2).distort(1)
+$: note("<g1 e1 d2 e1>").s("sine").add(sine.range(0, 4),slow()).room(0.5).tremolo("<3 6 3 6> ").tremoloskew("<0.5>").gain(0.6).distort(2).tremoloshape("<tri>")
